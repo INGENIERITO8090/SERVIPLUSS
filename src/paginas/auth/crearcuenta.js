@@ -6,13 +6,11 @@ import swal from "sweetalert";
 const CrearCuenta = () => {
 
 const [ usuario,setUsuario] =useState({
- 
  nombre:'',
  email:'',
  password:'',
  confirmar:''
 
- 
 });
 
 const {nombre,email,password,confirmar } = usuario;
@@ -99,16 +97,11 @@ const crearCuenta = async() => {
                  }
                 }); 
 
-
-
                 setUsuario({
                 nombre:' ',
                 email:' ',
                 password:' ',
                 confirmar:' '
-
-
-
                 })
 
 
@@ -125,7 +118,8 @@ setUsuario({
        [e.target.name]:e.target.value
 })
 }
-const onSubmit =(e) => {
+const onSubmit =(e) => { 
+    
     e.preventDefault(); 
     crearCuenta();
 
